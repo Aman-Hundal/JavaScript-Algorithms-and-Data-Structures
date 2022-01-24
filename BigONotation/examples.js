@@ -24,6 +24,7 @@ i<= 1 is n comparisons
 conclusion = 5n + 2 (if n = 10 operations = 52)
 BigO notation = O(n) (linear) - simplified BigO notation 
 */
+// runtime grows relative to input n
 
 //solution 2:
 function addUpToB(n) {
@@ -39,4 +40,16 @@ console.log(`${(t2B-t1B)/1000} seconds`)
 // *, + and / are the only operations the computer has to do
 // if n is 2 or 10000, there are only going to be 3 operations
 //conclusion = 3 operations
-//BigO notation = O(1)(constant) - simplfiied BigONotation
+//BigO notation = O(1)(constant) - simplfiied BigO notation
+
+//example 3:
+function printPairs(n) {
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      console.log(i,j)
+    }
+  }
+}
+// this is a quadratic/exponential trend. Runtime is exponential (n^2) as  input n grows
+// BigO notation = O(n^2)
+// its a O(n) operation (a loop) inside another O(n) operation (another loop) = O( n*n) or O(n^2)
