@@ -53,3 +53,28 @@ function printPairs(n) {
 // this is a quadratic/exponential trend. Runtime is exponential (n^2) as  input n grows
 // BigO notation = O(n^2)
 // its a O(n) operation (a loop) inside another O(n) operation (another loop) = O( n*n) or O(n^2)
+
+//Space Complexity Example 1
+function sum(arr) {
+  let total = 0;
+  for (let i = 0; i< arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+}
+//Big O Notation for space complexity = O(1) (constant)
+
+//Space Complexity Example 2
+function double(arr) {
+  let newArr= [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(2*arr[i]);
+  }
+  return newArr;
+}
+//BigONotation = O(n)
+//key indicator is line 71. as arr length grows our newArray gets longer and longer and we are storing more items in our newArr
+// the space that is taken is directly proporitionate to n number in the newArr
+
+//Logs!
+
