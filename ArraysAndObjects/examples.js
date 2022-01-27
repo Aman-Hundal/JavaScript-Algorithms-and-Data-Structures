@@ -19,3 +19,10 @@ const names = ["Michael", "Jim", "Pam"];
 // the amount it takes roughly grows in proportion to the size of the array (n). The same rules of above go for removing from an array
 //overall push and pop faster than shift and unshift
 //seraching is O(n)
+
+//BigO on built in array methods
+/*
+• push, pop = O(1)
+• shift, unshift, concat, slice, splice, forEach, map, filter, reduce, etc = O(n)
+• sort = O(n * log N)
+*/
