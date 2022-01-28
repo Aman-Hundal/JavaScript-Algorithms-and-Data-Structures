@@ -48,7 +48,7 @@ const merge = function(nums1, m, nums2, n) {
 // steps: 1. create three empty arrs. one to hold nums 1 m elms and two to hold nums 2 n elms, finally a merged array
 //2. loop through nums 1 and push all elms of m to arrOne, do same to arrTwo
 // 3. merge arrays with another loop, then do sort command on final return
-//Stretch - Find solution with O(m+n) time complexity?
+//Stretch - Find solution with O(m+n) time complexity
 
 //Day 3 - Intersection of Two Arrays II
 
