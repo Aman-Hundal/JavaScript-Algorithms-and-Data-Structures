@@ -5,7 +5,7 @@ const validAnagram = (str1,str2) => {
   const string2Obj = {};
   const string1Arr = str1.split("");
   const string2Arr = str2.split("");
-  
+
   for (let char of string1Arr) {
     if (string1Obj[char]) {
       string1Obj[char] += 1;
@@ -34,6 +34,7 @@ const validAnagram = (str1,str2) => {
 }
 
 console.log(validAnagram("", ""))
+
 /*
 Rules/Assumptions:
 - inputs are all lowercase, no punctuation, no spaces, no numbers.
