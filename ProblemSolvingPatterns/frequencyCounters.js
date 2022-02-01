@@ -1,14 +1,7 @@
-// Example 1: Write a function called same, which accepts two arrays. The function should return true if every value in the array has its 
-// corresponding value squared in the second array. The frequency of values must be the same. Order does not matter. 
+// Example 1: Write a function called same, which accepts two arrays. The function should return true if every value in the array has its corresponding value squared in the second array. The frequency of values must be the same. Order does not matter. 
 
 /* 
 Problem Review:
-Step 1.
-- find the sq2 of a number in one array in the second array. If all nubers and elsm in array 1 exist as sq2 in arr 2 return true. the number must appear the same amount of times (frequency must be same)
-- inputs = 2 arrays
-- outputs boolean
-
-Step 2.
 arr1 = [1,2,3], arr2 = [4,1,9] : TRUE
 arr1 = [1,2,1], arr2 = [4,4,1] : FALSE. 1 has two appear twice in arr2 and 4 only once. the frequency matters
 arr1 = [1,2,3], arr2 = [1,9] : FALSE. missing 4 in arr2.
@@ -59,7 +52,3 @@ const sameBIGON = (arr1, arr2) => {
 }
   return true //if all checks passed return true (arr1's elms are in arr2 and they are squared and occur the same amount of time (frequency is matched))
 }
-
-//Anagram Challenge w/ Frequency Counter
-
-
