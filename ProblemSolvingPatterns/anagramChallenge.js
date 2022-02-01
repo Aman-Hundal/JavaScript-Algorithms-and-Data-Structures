@@ -3,10 +3,9 @@
 const validAnagram = (str1,str2) => {
   const string1Obj = {};
   const string2Obj = {};
-  const string1Arr = str1.split("");
-  const string2Arr = str2.split("");
-
-  for (let char of string1Arr) {
+  
+  for (let i = 0; i < str1.length; i++) {
+    let char = str1[i]
     if (string1Obj[char]) {
       string1Obj[char] += 1;
     } else {
@@ -14,14 +13,15 @@ const validAnagram = (str1,str2) => {
     }
   }
 
-  for (let char of string2Arr) {
+  for (let i = 0; i < str2.length; i++)  {
+    let char = str2[i]
     if (string2Obj[char]) {
       string2Obj[char] += 1;
     } else {
       string2Obj[char] = 1;
     }
   }
-  
+
   for (let key in string1Obj) {
     if (!(key in string2Obj)) {
       return false;
@@ -33,7 +33,7 @@ const validAnagram = (str1,str2) => {
   return true;
 }
 
-console.log(validAnagram("", ""))
+console.log(validAnagram("rat", "car"))
 
 /*
 Rules/Assumptions:
