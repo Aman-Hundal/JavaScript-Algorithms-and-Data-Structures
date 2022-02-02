@@ -1,25 +1,24 @@
 // Count Unique Values Challenge with Multiple Pointers
 
 const countUniqueValues = (sortedArr) => {
-  let counter = 0;
+  let counter = 1;
   let p1 = 0;
   let p2 = 1;
 
-  while (p1 < sortedArr.length) {
+  while (p2 < sortedArr.length) {
     if (sortedArr[p1] !== sortedArr[p2]) {
-      counter += 1
-      p1 = p2
+      counter += 1;
+      p1 = p2;
+      console.log(sortedArr[p1],sortedArr[p2])
     } else {
-      p2++
+      p2++;
     }
 
   }
-
   return counter;
-
 }
 
-console.log(countUniqueValues([1,1,1,1,1,2]));
+console.log(countUniqueValues([1,1,1,1,1,2,4,5,5]));
 
 /*
 Rules/Assumptions
