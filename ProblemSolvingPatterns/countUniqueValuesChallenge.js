@@ -3,7 +3,6 @@
 const countUniqueValues = (sortedArr) => {
   let counter = 0;
   let p1 = 0;
-  let p2 = 1;
   
   if (sortedArr.length === 0) {
     return 0;
