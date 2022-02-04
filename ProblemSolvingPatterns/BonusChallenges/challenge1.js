@@ -57,17 +57,3 @@ Step 3:
 - create a final for in loop to compare the keys and values (digits and their frequencies) of both objects - if key is not same or if frequenices are not same return false
 - finaly return true at end of code indicating that digits have same digits and freuqneices
 */
-
-
-
-
-
-//Challenge 3 - averagePair (Multiple Pointers Pattern)
-
-//Challenge 4 - isSubsequence (Multiple Pointers Pattern)
-
-//Challenge 5 - maxSubArraySum (Sliding Window Pattern)
-
-//Challenge 6 - minSubArrayLen (Sliding Window Pattern)
-
-//Challenge 7 - findLongestSubstring (Sliding Window Pattern)
