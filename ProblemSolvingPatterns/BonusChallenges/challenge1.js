@@ -35,7 +35,6 @@ function sameFrequency(num1, num2) {
 
 console.log(sameFrequency(182, 281)) // true {1:2, 8:2, 2:2}
 
-
 /*
 Step 1: 
 - Given two positive integers find out if the two numbers have the same frequency of digits. Must have O(n) complexity
@@ -59,7 +58,9 @@ Step 3:
 - finaly return true at end of code indicating that digits have same digits and freuqneices
 */
 
-//Challenge 2 - areThereDuplicates (Frequency Counter + Multiple Pointers Patterns)
+
+
+
 
 //Challenge 3 - averagePair (Multiple Pointers Pattern)
 
