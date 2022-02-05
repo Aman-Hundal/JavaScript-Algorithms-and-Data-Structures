@@ -42,14 +42,3 @@ Step 3:
   - if arg is in obj return true;
 - return false at end indicating that there are no duplicates
 */
-
-
-//Challenge 3 - averagePair (Multiple Pointers Pattern)
-
-//Challenge 4 - isSubsequence (Multiple Pointers Pattern)
-
-//Challenge 5 - maxSubArraySum (Sliding Window Pattern)
-
-//Challenge 6 - minSubArrayLen (Sliding Window Pattern)
-
-//Challenge 7 - findLongestSubstring (Sliding Window Pattern)
