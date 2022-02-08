@@ -4,7 +4,7 @@ function maxSubarraySum(arr, targetLength) {
   let maxSum = 0;
   let currentSum = 0;
 
-  if (arr.length < targetLength) {
+  if (arr.length < targetLength || isNaN(targetLength)) {
     return null;
   }
 
@@ -25,6 +25,7 @@ function maxSubarraySum(arr, targetLength) {
 console.log(maxSubarraySum([100,200,300,400], 2))
 
 /*
+time complexity - O(n) space complexity - O(1)
 Step1:
 - Given an array of integers and a number, write a function which finds the max sum of a subarray with the length of the number passed to the function
 - Function receivees a array of numbers and another number. Find the highest/max total subarray using the number as the length for the subaray
