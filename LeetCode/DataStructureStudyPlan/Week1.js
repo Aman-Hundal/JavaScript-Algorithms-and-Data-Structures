@@ -1,19 +1,37 @@
 // Day 1 - Contains Duplicate
- const containsDuplicate = function(nums) {
-  for (let i = 0; i <= nums.length; i++) {
-      for (let j = i+1; j < nums.length; j++) {
-          if (nums[i] === nums[j]) {
-              return true;
-          }
-      }
-  }
+const containsDuplicate = function(nums) {
+    const frequencyObj = {};
+    for (let i = 0; i < nums.length; i++) {
+        if (!frequencyObj[nums[i]]) {
+            frequencyObj[nums[i]] = 1;
+        } else {
+            frequencyObj[nums[i]] += 1;
+        }
+    }
+    
+    for (let key in frequencyObj) {
+        if (frequencyObj[key] > 1) {
+            return true;
+        }
+    }
     return false;
 };
 
 // Day 1 - Maximum Subarray
 const maxSubArray = function(nums) {
-
-};
+    let currentSum = 0;
+    let maxSum = nums[0];
+    
+    for (let i = 0; i < nums.length; i++) {
+        currentSum = nums[i];
+        maxSum = Math.max(maxSum, currentSum);
+        for (let j = i + 1; j < nums.length; j++) {
+            currentSum += nums[j]
+            maxSum = Math.max(maxSum, currentSum);
+        }
+    }
+    return maxSum;
+}
 //Stretch -> Make O(n) solution
 
 // Day 2 - Two Sum
