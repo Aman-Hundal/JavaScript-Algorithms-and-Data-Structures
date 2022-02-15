@@ -179,17 +179,17 @@ const isAnagram = function(s, t) {
     
     for (let char of s) {
         if (!sCharObj[char]) {
-            sCharObj[char] = 1
+            sCharObj[char] = 1;
         } else {
-            sCharObj[char] += 1
+            sCharObj[char] += 1;
         }
     }
     
     for (let char of t) {
         if (!tCharObj[char]) {
-            tCharObj[char] = 1
+            tCharObj[char] = 1;
         } else {
-            tCharObj[char] += 1
+            tCharObj[char] += 1;
         }
     }
     
