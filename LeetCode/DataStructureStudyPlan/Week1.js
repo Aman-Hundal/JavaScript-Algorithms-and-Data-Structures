@@ -69,7 +69,6 @@ const merge = function(nums1, m, nums2, n) {
 //Stretch - Find solution with O(m+n) time complexity
 
 //Day 3 - Intersection of Two Arrays II
-
 const intersect = function(nums1, nums2) {
     const resultArr = [];
     for (let i = 0; i < nums1.length; i++) {
@@ -84,4 +83,124 @@ const intersect = function(nums1, nums2) {
     return resultArr;
 };
 
-//Day 3 - Best Time to Buy and Sell Stock
+//Day 3 Best Time to Buy and Sell Stock
+const maxProfit = function(prices) {
+    let p1 = 0;
+    let p2 = 1;
+    let currentSum = 0;
+    let maxSum = 0;
+  
+    while(p2 < prices.length) { //p2 is generally your point of interest for length or your while loop
+      if (prices[p1] >= prices[p2]) { //this creates a new window (using below example 1 -> closes [7,1] opens [1,5]). THIS IS YOUR CONDITION TO OPEN/EXTEd/CLOSE WINDOW
+        p1 = p2;
+        p2++
+      }
+      if (prices[p1] < prices[p2]) { //this extends the window (using below example 1 -> extends [1,5,3], 7 IS IRRELEVANT NOW as its too high). THIS IS YOUR OTHER CONDITION TO OPEN/EXTEd/CLOSE WINDOW
+        currentSum = prices[p2] - prices[p1];
+        maxSum = Math.max(currentSum, maxSum);
+        p2++;
+      }
+    }
+    return maxSum;
+};
+console.log(maxProfit([5,2,4,1,2,3]));
+
+// Day 6 First Unique Character
+
+const firstUniqChar = function(s) {
+    const charObj = {};
+    
+    if (s.length === 0) {
+        return -1;
+    }
+    
+    for (let char of s) {
+        if (!charObj[char]) {
+            charObj[char] = 1;
+        } else {
+            charObj[char] += 1;
+        }
+    }
+    
+    for (let i = 0; i < s.length; i++) {
+        if (charObj[s[i]] === 1) {
+            return i;
+        }
+    }
+    
+    return -1;
+};
+
+// Day 6 Ransom Note
+
+const canConstruct = function(ransomNote, magazine) {
+    const ransomNoteCharObj = {};
+    const magazineCharObj = {};
+    
+    for (let char of ransomNote) {
+        if (!ransomNoteCharObj[char]) {
+            ransomNoteCharObj[char] = 1;
+        } else {
+            ransomNoteCharObj[char] += 1;
+        }
+    }
+    
+    for (let char of magazine) {
+        if (!magazineCharObj[char]) {
+            magazineCharObj[char] = 1;
+        } else {
+            magazineCharObj[char] += 1;
+        }
+    }
+    
+    for(let key in ransomNoteCharObj ) {
+        
+        if (!(key in magazineCharObj)) {
+            return false;
+        }
+        if (ransomNoteCharObj[key] > magazineCharObj[key]) {
+            return false
+        }
+    }
+
+    return true;
+};
+
+
+// Day 6 Valid Anagram
+
+const isAnagram = function(s, t) {
+    let sCharObj = {};
+    let tCharObj = {};
+    
+    if (t.length !== s.length) {
+        return false;
+    }
+    
+    for (let char of s) {
+        if (!sCharObj[char]) {
+            sCharObj[char] = 1
+        } else {
+            sCharObj[char] += 1
+        }
+    }
+    
+    for (let char of t) {
+        if (!tCharObj[char]) {
+            tCharObj[char] = 1
+        } else {
+            tCharObj[char] += 1
+        }
+    }
+    
+    for (let key in tCharObj) {
+        if((!key in sCharObj)) {
+            return false;
+        }
+        if (tCharObj[key] !== sCharObj[key]) {
+            return false;
+        }
+    }
+    
+    return true;
+};

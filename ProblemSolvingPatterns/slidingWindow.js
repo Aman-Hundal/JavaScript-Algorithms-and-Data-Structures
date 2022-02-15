@@ -50,3 +50,36 @@ const maxSubArraySlidingWindow = (arr, n) => {
   return maxSum;
 }
 console.log(maxSubArraySlidingWindow([2,6,9,2,1,8,5,6,3], 3));
+
+// SLIDING WINDOW?? LEET CODE BUY SELL STOCK EXAMPLE USE WHILE LOOPS FOR SLIDING WINDOWS?
+const maxProfit = function(prices) {
+  let p1 = 0;
+  let p2 = 1;
+  let currentSum = 0;
+  let maxSum = 0;
+
+  while(p2 < prices.length) { //p2 is generally your point of interest for length or your while loop
+    if (prices[p1] >= prices[p2]) { //this creates a new window (using below example 1 -> closes [7,1] opens [1,5]). THIS IS YOUR CONDITION TO OPEN/EXTEd/CLOSE WINDOW
+      p1 = p2;
+      p2++
+    }
+    if (prices[p1] < prices[p2]) { //this extends the window (using below example 1 -> extends [1,5,3], 7 IS IRRELEVANT NOW as its too high). THIS IS YOUR OTHER CONDITION TO OPEN/EXTEd/CLOSE WINDOW
+      currentSum = prices[p2] - prices[p1];
+      maxSum = Math.max(currentSum, maxSum);
+      p2++;
+    }
+  }
+  return maxSum;
+};
+
+console.log(maxProfit([5,2,4,1,2,3]))
+
+//SOlution Example
+// Input: prices = [7,1,5,3,6,4]
+// Output: 5
+// Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+// Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+
+// Input: prices = [7,6,4,3,1]
+// Output: 0
+// Explanation: In this case, no transactions are done and the max profit = 0.

@@ -1,4 +1,4 @@
-// Example 1: Martin and the Dragon. Return true if odd is found, if odd is not found return false.
+// Example 1: Martin and the Dragon. Return true if odd is found, if odd is not found return false. Dragon will only look at first number of list.
 
 const dragonAnswer = (martinList) => {
 
@@ -15,4 +15,4 @@ const dragonAnswer = (martinList) => {
   
 }
 
-dragonAnswer([3142, 3, 6550, 5914]);
+dragonAnswer([3142, 5914, 6550, 3]);
